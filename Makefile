@@ -1,9 +1,12 @@
-OBJS = a.out
+all : myshell.out
 
-a.out: myshell.c
-	gcc myshell.c
+myshell.out: myshell.c
+	gcc -o myshell myshell.c
 
 .PHONY: clean
 
 clean:
-	rm -f $(OBJS)
+	rm -f myshell.out
+	
+run: myshell.out
+	./myshell.out
