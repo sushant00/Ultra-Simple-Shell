@@ -1,6 +1,6 @@
-all : myshell.out
+all : myshell run
 
-myshell.out: myshell.c
+myshell: myshell.c
 	gcc -o myshell myshell.c
 
 .PHONY: clean
@@ -8,5 +8,5 @@ myshell.out: myshell.c
 clean:
 	rm -f myshell.out
 	
-run: myshell.out
-	./myshell.out
+run: myshell
+	./myshell
